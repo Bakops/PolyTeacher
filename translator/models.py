@@ -11,3 +11,5 @@ class Translation(models.Model):
     
     def __str__(self):
         return f"{self.source_language}-{self.source_text}-{self.target_language}-{self.target_text}"
+    
+    
