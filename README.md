@@ -21,8 +21,10 @@ docker-compose up
 ### Dans POSTMAN
 
 ```
-"source_language": "English",
-"source_text": "BITCH",
-"target_language": "Français"
+{
+  "source_language": "English",
+  "source_text": "BITCH",
+  "target_language": "Français"
+}
 ```
 
