@@ -23,7 +23,7 @@ docker-compose up
 ```
 {
   "source_language": "English",
-  "source_text": "BITCH",
+  "source_text": "sofa",
   "target_language": "Français"
 }
 ```
