@@ -2,7 +2,7 @@
 import google.generativeai as genai
 import os
 
-api_key = "AIzaSyBv9jSPmF30c4cpy4-QOpqVManAXfPPAv8"
+api_key = "AIzaSyCX5oJM6_Ru9M4NF7BHK51aBr_jbGcpIxQ"
 
 source_language = "FR"
 target_language = "ES"
@@ -15,4 +15,3 @@ genai.configure(api_key=api_key)
 
 model = genai.GenerativeModel("gemini-1.5-flash")
 response = model.generate_content(prompt)
-print(response.text)

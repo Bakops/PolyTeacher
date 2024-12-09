@@ -1,3 +1,5 @@
+
+
 """
 URL configuration for polyteacher project.
 
@@ -20,11 +22,30 @@ from translator.views import index
 from translator.views import FrenchSpanishTranslationViewSet
 from translator.views import FrenchEnglishTranslationViewSet
 from translator.views import AllTranslationViewSet
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Jaseci API",
+        default_version='v1',
+        description="Welcome to the world of Jaseci",
+        terms_of_service="https://www.jaseci.org",
+    ),
+    public=True,
+)
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    path('redocs/', schema_view.with_ui('redoc', cache_timeout=0)),
     path('api/french_spanish_translator/', FrenchSpanishTranslationViewSet.as_view(), name='french_spanish_translator'),
     path('api/french_english_translator/', FrenchEnglishTranslationViewSet.as_view(), name='french_english_translator'),
     path('api/All_translator/', AllTranslationViewSet.as_view(), name='french_spanish_translator')
 ]
+
+
