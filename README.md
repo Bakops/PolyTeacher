@@ -18,6 +18,11 @@ docker-compose up
 
 ```
 
+### Attention !! Enlever cet élément si une erreur est rencontrer lors du lancement du docker
+```
+version: '3' # Supprimmer si docker-compose ne fonctionne pas
+```
+
 ### Dans POSTMAN
 
 ```
